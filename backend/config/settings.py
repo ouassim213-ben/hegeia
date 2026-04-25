@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-e+063l3143@z6ylbd_axfvfw@(cgu^a$@2g513!&2@%5b*2re&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['hegeia.onrender.com', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
