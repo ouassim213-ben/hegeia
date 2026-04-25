@@ -1,0 +1,369 @@
+/* ============================================================
+   Home.css — High-End Health-Tech Redesign
+   Professional Blue: #021B27
+   ============================================================ */
+
+.home-container {
+  background-color: #ffffff;
+  min-height: 100vh;
+  overflow-x: hidden;
+  color: #333;
+}
+
+/* --- Section Containers --- */
+section {
+  padding: 6rem 5%;
+}
+
+.container-wide {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* --- Typography --- */
+.text-navy {
+  color: #021B27 !important;
+}
+
+.section-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  color: #021B27;
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+/* --- Hero Section --- */
+.hero-wrapper {
+  min-height: 90vh;
+  display: flex;
+  align-items: stretch;
+  background: white;
+  padding: 10rem 5% 0; /* Removed bottom padding */
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: stretch;
+  width: 100%;
+}
+
+@media (max-width: 968px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+
+.hero-text {
+  max-width: 650px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 4rem; /* Compensate for wrapper bottom padding */
+  animation: floatUp 1s ease-out forwards;
+}
+
+.hero-text h1.text-navy {
+  font-family: var(--font-heading);
+  font-size: clamp(3.5rem, 6vw, 5.5rem);
+  line-height: 1.1;
+  color: #021B27 !important;
+  margin-bottom: 1.5rem;
+}
+
+.hero-text p.text-muted {
+  font-size: 1.25rem;
+  color: #64748b;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+}
+
+.hero-image {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end; /* Flush with bottom */
+  width: 100%;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 800px;
+  height: 100%;
+  max-height: 90vh;
+  object-fit: cover;
+  object-position: bottom;
+  display: block;
+  border-radius: 20px;
+  box-shadow: 0 15px 45px rgba(2, 27, 39, 0.12);
+  mix-blend-mode: multiply;
+  animation: anchoredZoom 12s ease-in-out infinite alternate;
+  transform-origin: bottom center;
+}
+
+/* --- Nutrition Plans Grid --- */
+.plans-section {
+  background-color: #ffffff;
+  padding: 8rem 5%;
+}
+
+.plans-grid-modern {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.plan-card-modern {
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 24px;
+  padding: 2.5rem;
+  text-align: center;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 400px;
+  position: relative;
+  overflow: hidden;
+}
+
+.plan-card-modern:hover {
+  border-color: transparent;
+  transform: translateY(-10px);
+  box-shadow: 0 24px 50px rgba(2, 27, 39, 0.12);
+}
+
+.plan-free-badge {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background: #021B27;
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  padding: 5px 12px;
+  border-radius: 99px;
+}
+
+.plan-card-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 2rem;
+}
+
+.plan-card-modern h3 {
+  color: #021B27;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.plan-card-modern p {
+  color: #64748b;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.btn-plan {
+  margin-top: auto;
+  width: 100%;
+  padding: 1rem;
+  background: #021B27;
+  color: white;
+  border-radius: 12px;
+  font-weight: 600;
+  display: block;
+  transition: background 0.3s ease;
+}
+
+.btn-plan:hover {
+  background: #0a2d3d;
+  color: white;
+}
+
+/* --- Simplified Chatbot Section --- */
+.chatbot-simple-section {
+  background: #ffffff;
+  padding: 8rem 5%;
+  text-align: center;
+}
+
+.chatbot-simple-inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.chatbot-badge-simple {
+  display: inline-block;
+  color: #88B699;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.chatbot-title-simple {
+  color: #021B27;
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 3.5rem;
+}
+
+.chatbot-simple-window {
+  background: #ffffff;
+  border: 1px solid #eef2f6;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+  overflow: hidden;
+  text-align: left;
+}
+
+.chatbot-simple-messages {
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.chat-msg-row {
+  display: flex;
+  align-items: flex-start;
+  max-width: 85%;
+}
+
+.user-row {
+  align-self: flex-end;
+  justify-content: flex-end;
+}
+
+.bot-row {
+  align-self: flex-start;
+  gap: 12px;
+}
+
+.bot-icon-small {
+  width: 32px;
+  height: 32px;
+  background: #f0f7f4;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.chat-bubble-simple {
+  padding: 1.25rem 1.5rem;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.user-bubble {
+  background: #021B27;
+  color: white;
+  border-radius: 18px 18px 4px 18px;
+}
+
+.bot-bubble {
+  background: #f8fafc;
+  color: #021B27;
+  border-radius: 18px 18px 18px 4px;
+  border: 1px solid #f1f5f9;
+}
+
+.bot-bubble strong {
+  color: #88B699;
+}
+
+.chatbot-simple-footer {
+  padding: 2rem 2.5rem;
+  border-top: 1px solid #f1f5f9;
+  text-align: center;
+}
+
+.btn-simple-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #021B27;
+  color: white;
+  padding: 1rem 2.5rem;
+  border-radius: 12px;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+.btn-simple-cta:hover {
+  background: #0a2d3d;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(2, 27, 39, 0.15);
+}
+
+@media (max-width: 768px) {
+  .chatbot-simple-messages { padding: 1.5rem; }
+  .chat-bubble-simple { font-size: 0.95rem; padding: 1rem; }
+  .chat-msg-row { max-width: 100%; }
+}
+
+
+/* --- Shared Components --- */
+.btn-primary-modern {
+  background-color: #88B699;
+  color: white;
+  padding: 12px 24px;
+  width: fit-content;
+  align-self: flex-start; /* Ensures left alignment inside flex containers */
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 25px rgba(136, 182, 153, 0.3);
+}
+
+.btn-primary-modern:hover {
+  background-color: #6a9e7e;
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px rgba(136, 182, 153, 0.4);
+}
+
+/* Animations */
+@keyframes floatUp {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes floatZoom {
+  0% { transform: scale(1) translateY(0); }
+  50% { transform: scale(1.06) translateY(-15px); }
+  100% { transform: scale(1) translateY(0); }
+}
+
+@keyframes anchoredZoom {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.05); }
+}
+
+@keyframes dynamicZoom {
+  0% { transform: scale(1.05) translateY(0); }
+  100% { transform: scale(1.18) translateY(-15px); }
+}
+
+footer {
+  background: #f8fafc;
+  padding: 4rem 5%;
+  text-align: center;
+  color: #64748b;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
