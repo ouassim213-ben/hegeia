@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-e+063l3143@z6ylbd_axfvfw@(cgu^a$@2g513!&2@%5b*2re&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.1.110', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['hegeia.onrender.com', '127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -128,8 +128,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # CORS
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173",
-    "http://127.0.0.1:5173",
+    "https://your-vercel-link.vercel.app",  # حط رابط الـ frontend تاعك هنا
+    "http://localhost:5173",                 # للـ dev المحلي
 ]
 CORS_ALLOW_ALL_ORIGINS = True # For easier development
 
