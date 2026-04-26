@@ -132,7 +132,8 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",                 # للـ dev المحلي
 ]
 CORS_ALLOW_ALL_ORIGINS = True # For easier development
-
+# هادو يساعدو Render باش يلقى ملفات الـ CSS والصور
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework.authentication.TokenAuthentication',
