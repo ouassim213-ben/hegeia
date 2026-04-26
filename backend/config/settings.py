@@ -128,8 +128,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # CORS
 CORS_ALLOWED_ORIGINS = [
-    "https://your-vercel-link.vercel.app",  # حط رابط الـ frontend تاعك هنا
-    "http://localhost:5173",                 # للـ dev المحلي
+    "https://hegeia.vercel.app",
+    "http://localhost:5173",
 ]
 CORS_ALLOW_ALL_ORIGINS = True # For easier development
 # هادو يساعدو Render باش يلقى ملفات الـ CSS والصور
