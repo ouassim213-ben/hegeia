@@ -22,7 +22,6 @@ urlpatterns = [
     
     # Public/Authenticated Endpoints
     path('user/appointments/', UserAppointmentListView.as_view(), name='user-appointments'),
-    # path('posts/', PostListCreateView.as_view(), name='posts'), # Replaced by ViewSet
     path('', include(router.urls)),
     path('specialists/', SpecialistListView.as_view(), name='specialists'),
     path('specialists/<int:pk>/', SpecialistDetailView.as_view(), name='specialist-detail'),

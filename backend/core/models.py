@@ -12,15 +12,15 @@ class Profile(models.Model):
         ('standard', 'Standard'),
         ('premium', 'Premium'),
     )
-    tier = models.CharField(max_length=20, choices=TIER_CHOICES, default='basic')
-    role = models.CharField(max_length=20, choices=ROLE_CHOICES, default='PATIENT')
+    tier = models.CharField(max_length=20, choices=TIER_CHOICES, default='basic', db_index=True)
+    role = models.CharField(max_length=20, choices=ROLE_CHOICES, default='PATIENT', db_index=True)
     specialty_type = models.CharField(max_length=100, blank=True, null=True)
     bio = models.TextField(blank=True, null=True)
     image = models.ImageField(upload_to='profile_pics/', null=True, blank=True)
     rating = models.FloatField(default=5.0)
     num_reviews = models.IntegerField(default=0)
     work_certificate = models.FileField(upload_to='certificates/', null=True, blank=True)
-    is_approved = models.BooleanField(default=False)
+    is_approved = models.BooleanField(default=False, db_index=True)
     GOAL_CHOICES = [
         ('WEIGHT_LOSS', 'Weight Loss'),
         ('MUSCLE_GAIN', 'Muscle Gain'),
@@ -52,7 +52,7 @@ class Post(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='posts')
     content = models.TextField()
     image = models.ImageField(upload_to='publications/', null=True, blank=True)
-    is_validated = models.BooleanField(default=False)
+    is_validated = models.BooleanField(default=False, db_index=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
@@ -73,7 +73,7 @@ class Appointment(models.Model):
     plan_name = models.CharField(max_length=50)
     date = models.CharField(max_length=50) # e.g. "Thu 16.04"
     time = models.CharField(max_length=50) # e.g. "14:00"
-    status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='UPCOMING')
+    status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='UPCOMING', db_index=True)
     zoom_link = models.URLField(max_length=500, blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
